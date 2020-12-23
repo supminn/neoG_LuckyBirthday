@@ -1,8 +1,9 @@
 //Initializing variables to fetch data
-let dob = document.querySelector("#date-dob");
-let numLucky = document.querySelector("#num-luck");
-let btnCheck = document.querySelector("#btn-check");
-let txtResult = document.querySelector("#txt-result");
+const dob = document.querySelector("#date-dob");
+const numLucky = document.querySelector("#num-luck");
+const btnCheck = document.querySelector("#btn-check");
+const txtResult = document.querySelector("#txt-result");
+const btnReset = document.querySelector("#btn-reset");
 
 function isDobLucky() {
     //Initializing block variables
@@ -26,4 +27,10 @@ function isDobLucky() {
         txtResult.innerText = "You're birthday is not lucky 🙁"
     }
 }
+
+//Check lucky birthday
 btnCheck.addEventListener('click', isDobLucky);
+//Reset the data
+btnReset.addEventListener('click',function(){
+    txtResult.innerText = "";
+})
