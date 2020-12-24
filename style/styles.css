@@ -10,6 +10,35 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
+.data-privacy{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    text-align: center;
+    border: 1px solid var(--fontColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bgColor);
+    box-shadow: 3px 8px 10px var(--fontColor), -10px -8px 10px var(--fontColor);
+}
+
+.close{
+    display: none;
+    position: absolute;
+    top: 38%;
+    right: 27%;
+    font-size: larger;
+    background-color: var(--bgColor);
+    border-radius: 20%;
+    padding: 0 1%;
+    border: 1px solid var(--fontColor);
+    cursor: pointer;
+}
+
 .content{
     display: flex;
     margin: 4rem;
@@ -84,7 +113,7 @@ footer span{
     outline: none;
 }
 
-#btn-check:hover, #btn-reset:hover{
+#btn-check:hover, #btn-reset:hover, .close:hover{
     transform: translateY(2px);
     box-shadow: -2px -2px 5px var(--fontColor);
 }
@@ -96,6 +125,7 @@ footer span{
     background:transparent;
     color: var(--fontColor);
     text-shadow: 2px 2px 5px;
+    outline: none;
 }
 
 #policy:hover, #policy:acive{
@@ -105,7 +135,6 @@ footer span{
 
 .form-field{
     padding-top: 7%;
-
 }
 
 input{
@@ -140,6 +169,9 @@ input{
     footer span{
         padding-top: 2%;
     }
+    .close{
+        top: 32%;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -166,5 +198,11 @@ input{
     footer span{
         padding-top: 2%;
     }
-    
+    .close{
+        top: 27%;
+        right: 28%;
+    }
+    .data-privacy{
+        font-size: medium;
+    }
 }

@@ -4,6 +4,9 @@ const numLucky = document.querySelector("#num-luck");
 const btnCheck = document.querySelector("#btn-check");
 const txtResult = document.querySelector("#txt-result");
 const btnReset = document.querySelector("#btn-reset");
+const btnPolicy = document.querySelector("#policy");
+const dataPolicy = document.querySelector(".data-privacy");
+const btnClose = document.querySelector(".close");
 
 function isDobLucky() {
     //Initializing block variables
@@ -29,9 +32,14 @@ function isDobLucky() {
         if (dobSum % parseInt(numLucky.value) == 0) {
             txtResult.innerText = "Congratulations! You're birthday is lucky 😁"
         } else {
-            txtResult.innerText = `You're birthday missed to be lucky by ${dobSum % parseInt(numLucky.value)} days 🙁`
+            txtResult.innerText = "You're birthday missed to be lucky 🙁"
         }
     }
+}
+
+function closePrivacy() {
+    dataPolicy.style.display = "none";
+    btnClose.style.display = "none";
 }
 
 //Check lucky birthday
@@ -40,3 +48,13 @@ btnCheck.addEventListener('click', isDobLucky);
 btnReset.addEventListener('click', function () {
     txtResult.innerText = "";
 })
+btnPolicy.addEventListener('click', function () {
+    if (dataPolicy.style.display == "none") {
+        dataPolicy.style.display = "block";
+        btnClose.style.display = "block";
+    }
+    else{
+        closePrivacy();
+    }
+})
+btnClose.addEventListener('click', closePrivacy);
