@@ -85,7 +85,7 @@ footer span{
 }
 .btns{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 5%;
     margin-left: 8%;
@@ -117,6 +117,7 @@ footer span{
     transform: translateY(2px);
     box-shadow: -2px -2px 5px var(--fontColor);
 }
+
 #policy{
     border: none;
     font-size: medium;
@@ -142,13 +143,14 @@ input{
     color: var(--bgColor);
     border-radius: 1rem;
     padding: 0.5rem;
-    max-width: 40%;
     text-align: center;
     font-weight: bold;
     outline: none;
     margin: 1rem;
 }
-
+input[type='number']{
+    max-width: 42%;
+}
 .form-input{
     display: flex;
     justify-content: space-between;
@@ -181,6 +183,18 @@ input{
     }
     .content-logic{
         margin: 0;
+        padding: 0;
+    }
+    .form-input{
+        flex-flow: row wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+    input{
+        margin: 1rem 0.7rem;
+    }
+    input[type='number']{
+        max-width: 70%;
     }
     .img-cake {
         display: none;
@@ -204,5 +218,10 @@ input{
     }
     .data-privacy{
         font-size: medium;
+    }
+    .btns{
+        justify-content: space-around;
+        margin-left: 0;
+        max-width: 100%;
     }
 }
