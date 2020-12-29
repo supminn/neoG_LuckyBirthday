@@ -48,13 +48,19 @@ btnCheck.addEventListener('click', isDobLucky);
 btnReset.addEventListener('click', function () {
     txtResult.innerText = "";
 })
+//View privacy policy
 btnPolicy.addEventListener('click', function () {
-    if (dataPolicy.style.display == "none") {
+    console.log(dataPolicy.style.display);
+    if (dataPolicy.style.display == "none" || !dataPolicy.style.display) {
         dataPolicy.style.display = "block";
         btnClose.style.display = "block";
     }
     else{
         closePrivacy();
     }
+        // dataPolicy.style.display = "block";
+        // btnClose.style.display = "block";
+       
 })
 btnClose.addEventListener('click', closePrivacy);
+
